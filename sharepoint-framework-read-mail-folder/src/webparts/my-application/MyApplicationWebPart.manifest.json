@@ -1,0 +1,33 @@
+{
+    "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/client-side-component-manifest.schema.json",
+    "id": "d856547f-067a-4e1c-884b-e3e72aab3294",
+    "alias": "MyApplication",
+    "componentType": "WebPart",
+    "version": "*", // The "*" signifies that the version should be taken from the package.json
+    "manifestVersion": 2,
+    /**
+     * This property should only be set to true if it is certain that the webpart does not
+     * allow arbitrary scripts to be called
+     */
+    "safeWithCustomScriptDisabled": false,
+    "preconfiguredEntries": [
+        {
+            "groupId": "d856547f-067a-4e1c-884b-e3e72aab3294",
+            "group": {
+                "default": "Under Development"
+            },
+            "title": {
+                "default": "MyApplication"
+            },
+            "description": {
+                "default": "MyApplication"
+            },
+            "officeFabricIconFontName": "Page",
+            "properties": {
+                "appId": "<!-- App ID -->",
+                "authUrl": "https://login.microsoftonline.com/common/oauth2/authorize",
+                "resourceUrl": "https://outlook.office.com"
+            }
+        }
+    ]
+}

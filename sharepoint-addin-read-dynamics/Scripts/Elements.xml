@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Scripts">
+    <File Path="Scripts\WebPart.js" Url="Scripts/WebPart.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-3.0.0.slim.min.map" Url="Scripts/jquery-3.0.0.slim.min.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-3.0.0.slim.min.js" Url="Scripts/jquery-3.0.0.slim.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-3.0.0.slim.js" Url="Scripts/jquery-3.0.0.slim.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-3.0.0.min.map" Url="Scripts/jquery-3.0.0.min.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-3.0.0.min.js" Url="Scripts/jquery-3.0.0.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-3.0.0.js" Url="Scripts/jquery-3.0.0.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-3.0.0.intellisense.js" Url="Scripts/jquery-3.0.0.intellisense.js" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

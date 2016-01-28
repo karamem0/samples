@@ -1,0 +1,10 @@
+{
+    "solution": {
+        "name": "MyApplication",
+        "id": "24e6ba37-c40d-4aaf-888a-ad58a2ba6c7d",
+        "version": "1.0.0.0"
+    },
+    "paths": {
+        "zippedPackage": "solution/MyApplication.sppkg"
+    }
+}

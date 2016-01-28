@@ -1,0 +1,24 @@
+# Solution files
+
+#### Core EditorConfig Options ####
+
+# Indentation and spacing
+[*.sln]
+indent_size = 4
+indent_style = tab
+
+# C# files
+[*.cs]
+
+#### Core EditorConfig Options ####
+
+# Indentation and spacing
+indent_size = 4
+indent_style = space
+
+# New line preferences
+end_of_line = crlf
+insert_final_newline = true
+
+# Charset preferences
+charset = utf-8

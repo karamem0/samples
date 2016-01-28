@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - SampleApplication</title>
+    <link rel="stylesheet" href="~/lib/twitter-bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <span class="navbar-brand">SampleApplication</span>
+      </div>
+    </div>
+  </nav>
+  <div class="container body-content">
+    @RenderBody()
+  </div>
+  <script src="~/lib/jquery/jquery.min.js"></script>
+  <script src="~/lib/twitter-bootstrap/js/bootstrap.min.js"></script>
+  <script src="~/lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+  <script src="~/js/site.js" asp-append-version="true"></script>
+  @RenderSection("Scripts", required: false)
+</body>
+</html>

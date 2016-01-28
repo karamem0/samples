@@ -1,0 +1,149 @@
+@model ExpenseCreateViewModel
+@{
+    ViewBag.Title = "Create Expense";
+}
+@section Scripts {
+    <script>
+        $(() => {
+            $('#Date').datepicker({
+                format: 'mm-dd-yyyy'
+            });
+        });
+    </script>
+}
+<div class="row">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @if (!Html.ViewData.ModelState.IsValid)
+        {
+            <div class="alert alert-warning">
+                @Html.ValidationSummary()
+            </div>
+        }
+        <div class="col-md-12">
+            <h3>@ViewBag.Title</h3>
+            <div class="form-horizontal">
+                <div class="form-group">
+                    @Html.LabelFor(
+                        model => model.Item.EmployeeId,
+                        new
+                        {
+                            @for = nameof(Model.Item.EmployeeId),
+                            @class = "col-md-2 control-label"
+                        }
+                    )
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(
+                            model => model.Item.EmployeeId,
+                            Model.Employees,
+                            "",
+                            new
+                            {
+                                id = nameof(Model.Item.EmployeeId),
+                                name = nameof(Model.Item.EmployeeId),
+                                @class = "form-control"
+                            }
+                        )
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(
+                        model => model.Item.PeriodId,
+                        new
+                        {
+                            @for = nameof(Model.Item.PeriodId),
+                            @class = "col-md-2 control-label"
+                        }
+                    )
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(
+                            model => model.Item.PeriodId,
+                            Model.Periods,
+                            "",
+                            new
+                            {
+                                id = nameof(Model.Item.PeriodId),
+                                name = nameof(Model.Item.PeriodId),
+                                @class = "form-control"
+                            }
+                        )
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(
+                        model => model.Item.Date,
+                        new
+                        {
+                            @for = nameof(Model.Item.Date),
+                            @class = "col-md-2 control-label"
+                        }
+                    )
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(
+                            model => model.Item.Date,
+                            "{0:MM-dd-yyyy}",
+                            new
+                            {
+                                id = nameof(Model.Item.Date),
+                                name = nameof(Model.Item.Date),
+                                @class = "form-control"
+                            }
+                        )
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(
+                        model => model.Item.Name,
+                        new
+                        {
+                            @for = nameof(Model.Item.Name),
+                            @class = "col-md-2 control-label"
+                        }
+                    )
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(
+                            model => model.Item.Name,
+                            new
+                            {
+                                id = nameof(Model.Item.Name),
+                                name = nameof(Model.Item.Name),
+                                @class = "form-control"
+                            }
+                        )
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(
+                        model => model.Item.Amount,
+                        new
+                        {
+                            @for = nameof(Model.Item.Amount),
+                            @class = "col-md-2 control-label"
+                        }
+                    )
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(
+                            model => model.Item.Amount,
+                            "{0:#,##0}",
+                            new
+                            {
+                                id = nameof(Model.Item.Amount),
+                                name = nameof(Model.Item.Amount),
+                                @class = "form-control"
+                            }
+                        )
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-inline">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default btn-primary">Create</button>
+                    <a href="@Url.Action("Index")" class="btn btn-default">Cancel</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

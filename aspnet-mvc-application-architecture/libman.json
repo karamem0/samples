@@ -1,0 +1,40 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "bootstrap-datepicker@1.8.0",
+      "files": [
+        "css/bootstrap-datepicker3.css",
+        "css/bootstrap-datepicker3.css.map",
+        "css/bootstrap-datepicker3.min.css",
+        "js/bootstrap-datepicker.js",
+        "js/bootstrap-datepicker.min.js"
+      ],
+      "destination": "wwwroot/lib/bootstrap-datepicker/"
+    },
+    {
+      "library": "jquery@3.3.1",
+      "files": [
+        "jquery.min.js",
+        "jquery.js",
+        "jquery.min.map"
+      ],
+      "destination": "wwwroot/lib/jquery/"
+    },
+    {
+      "library": "twitter-bootstrap@3.3.7",
+      "files": [
+        "js/bootstrap.min.js",
+        "css/bootstrap-theme.min.css",
+        "css/bootstrap.min.css",
+        "fonts/glyphicons-halflings-regular.eot",
+        "fonts/glyphicons-halflings-regular.svg",
+        "fonts/glyphicons-halflings-regular.ttf",
+        "fonts/glyphicons-halflings-regular.woff",
+        "fonts/glyphicons-halflings-regular.woff2"
+      ],
+      "destination": "wwwroot/lib/twitter-bootstrap/"
+    }
+  ]
+}

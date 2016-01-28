@@ -1,0 +1,1 @@
+## sharepoint-framework-read-dynamics
