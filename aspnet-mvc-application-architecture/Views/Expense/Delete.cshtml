@@ -1,0 +1,121 @@
+@model ExpenseDeleteItemViewModel
+@{
+    ViewBag.Title = "Delete Expense";
+}
+<div class="row">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @if (!Html.ViewData.ModelState.IsValid)
+        {
+            <div class="alert alert-warning">
+                @Html.ValidationSummary()
+            </div>
+        }
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.RowVersion)
+        <div class="col-md-12">
+            <h3>@ViewBag.Title</h3>
+            <div class="form-horizontal">
+                <div class="form-group">
+                    @Html.LabelFor(
+                        model => model.EmployeeName,
+                        new
+                        {
+                            @for = nameof(Model.EmployeeName),
+                            @class = "col-md-2 control-label"
+                        }
+                    )
+                    <div class="col-md-10">
+                        <div id="@nameof(Model.EmployeeName)" class="form-control-static">
+                            @Html.DisplayFor(model => model.EmployeeName)
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(
+                        model => model.JobTitleName,
+                        new
+                        {
+                            @for = nameof(Model.JobTitleName),
+                            @class = "col-md-2 control-label"
+                        }
+                    )
+                    <div class="col-md-10">
+                        <div id="@nameof(Model.JobTitleName)" class="form-control-static">
+                            @Html.DisplayFor(model => model.JobTitleName)
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(
+                        model => model.PeriodDate,
+                        new
+                        {
+                            @for = nameof(Model.PeriodDate),
+                            @class = "col-md-2 control-label"
+                        }
+                    )
+                    <div class="col-md-10">
+                        <div id="@nameof(Model.PeriodDate)" class="form-control-static">
+                            @Html.DisplayFor(model => model.PeriodDate)
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(
+                        model => model.Date,
+                        new
+                        {
+                            @for = nameof(Model.Date),
+                            @class = "col-md-2 control-label"
+                        }
+                    )
+                    <div class="col-md-10">
+                        <div id="@nameof(Model.Date)" class="form-control-static">
+                            @Html.DisplayFor(model => model.Date)
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(
+                        model => model.Name,
+                        new
+                        {
+                            @for = nameof(Model.Name),
+                            @class = "col-md-2 control-label"
+                        }
+                    )
+                    <div class="col-md-10">
+                        <div id="@nameof(Model.Name)" class="form-control-static">
+                            @Html.DisplayFor(model => model.Name)
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(
+                        model => model.Amount,
+                        new
+                        {
+                            @for = nameof(Model.Amount),
+                            @class = "col-md-2 control-label"
+                        }
+                    )
+                    <div class="col-md-10">
+                        <div id="@nameof(Model.Amount)" class="form-control-static">
+                            @Html.DisplayFor(model => model.Amount)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-inline">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default btn-primary">Delete</button>
+                    <a href="@Url.Action("Index")" class="btn btn-default">Cancel</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

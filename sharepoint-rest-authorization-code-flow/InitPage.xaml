@@ -1,0 +1,40 @@
+<Page
+    x:Class="Karamem0.Samples.InitPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel
+            Grid.Column="0"
+            Grid.Row="1"
+            Orientation="Vertical"
+            Margin="12,0,12,0"
+            MaxWidth="400">
+            <TextBlock
+                x:Name="SiteUrlTextBlock"
+                Margin="0,0,0,0"
+                Text="SharePoint サイトの URL" />
+            <TextBox
+                x:Name="SiteUrlTextBox"
+                Margin="0,6,0,0"
+                Text="" />
+            <Button
+                x:Name="AuthTextBox"
+                Content="認証を開始する"
+                Margin="0,12,0,0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Click="OnAuthTextBoxClick" />
+        </StackPanel>
+    </Grid>
+</Page>
