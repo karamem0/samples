@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction
+      Id="ExportToSpreadsheetAction"
+      RegistrationId="104"
+      RegistrationType="List"
+      Location="CommandUI.Ribbon"
+      Sequence="20"
+      Title="Excel にエクスポート">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.List.Actions.ExportToSpreadsheet">
+          <Button
+              Id="Ribbon.List.Actions.ExportToSpreadsheet"
+              Alt="Excel にエクスポート"
+              Sequence="20"
+              Command="SampleApplication.ExportToSpreadsheetCommand"
+              Image32by32="_layouts/15/images/XLS32.GIF"
+              Image16by16="_layouts/15/images/XLS16.GIF"
+              LabelText="Excel にエクスポート"
+              TemplateAlias="o1" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler
+          Command="SampleApplication.ExportToSpreadsheetCommand"
+          CommandAction="_layouts/SampleApplication/ExportToSpreadsheet.aspx?ListId={ListId}" />
+      </CommandUIHandlers>
+    </CommandUIExtension>
+  </CustomAction>
+</Elements>

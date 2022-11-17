@@ -1,0 +1,4 @@
+entityScope: Autonomous
+webapiRoutePrefix: ref
+appBasedAgentArgs: true
+entities: []

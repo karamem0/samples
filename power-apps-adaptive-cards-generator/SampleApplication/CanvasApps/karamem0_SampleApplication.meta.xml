@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>karamem0_SampleApplication</Name>
+  <AppVersion>2024-03-15T04:51:17Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.24031.25.0</CreatedByClientVersion>
+  <MinClientVersion>3.24031.25.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","showStatusBar":"false","publisherVersion":"3.24031.25","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false","sienaVersion":"20240315T044302Z-3.23092.13.0","offlineLargeFilesSupport":"false"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
+  <DisplayName>SampleApplication</DisplayName>
+  <Description xsi:nil="true"></Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
+  <Publisher></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{"8bea905f-4a5c-42a9-9795-5b77fa589f25":{"id":"/providers/microsoft.powerapps/apis/shared_logicflows","displayName":"ロジック フロー","iconUri":"https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png","dataSources":["SampleApplication(SendCard)"],"dependencies":["fee66844-6705-4635-a21b-e7899108b26b","3279ea4c-72fa-4d19-b672-bc6af0d00812"],"dependents":[],"parameterHints":{"workflowName":{"value":"b396b700-57fd-4371-a246-14f892a3c0b1"},"workflowEntityId":{"value":"4e7e79b9-2559-ee11-be6f-00224868726e"},"fee66844-6705-4635-a21b-e7899108b26b":{"value":"shared_office365users"},"3279ea4c-72fa-4d19-b672-bc6af0d00812":{"value":"shared_teams"},"workflowDisplayName":{"value":"SampleApplication (Send Card)"}},"parameterHintsV2":{"workflowName":{"value":"b396b700-57fd-4371-a246-14f892a3c0b1"},"workflowEntityId":{"value":"4e7e79b9-2559-ee11-be6f-00224868726e"},"shared_office365users":{"value":"fee66844-6705-4635-a21b-e7899108b26b"},"shared_teams":{"value":"3279ea4c-72fa-4d19-b672-bc6af0d00812"},"workflowDisplayName":{"value":"SampleApplication (Send Card)"}},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard","actions":["Run"]},"fee66844-6705-4635-a21b-e7899108b26b":{"id":"/providers/microsoft.powerapps/apis/shared_office365users","displayName":"Office 365 ユーザー","iconUri":"https://connectoricons-prod.azureedge.net/releases/v1.0.1672/1.0.1672.3545/office365users/icon.png","dataSources":[],"dependencies":[],"dependents":["8bea905f-4a5c-42a9-9795-5b77fa589f25"],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard"},"3279ea4c-72fa-4d19-b672-bc6af0d00812":{"id":"/providers/microsoft.powerapps/apis/shared_teams","displayName":"Microsoft Teams","iconUri":"https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/teams/icon.png","dataSources":[],"dependencies":[],"dependents":["8bea905f-4a5c-42a9-9795-5b77fa589f25"],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard"},"bffad929-8bd4-4d54-be59-b0577ccfa5e9":{"id":"/providers/microsoft.powerapps/apis/shared_logicflows","displayName":"ロジック フロー","iconUri":"https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png","dataSources":["SampleApplication(GenerateCard)"],"dependencies":[],"dependents":[],"parameterHints":{"workflowName":{"value":"64ee0860-bb16-4491-bdff-cf3cc2d3bade"},"workflowEntityId":{"value":"a2e86122-1c59-ee11-be6f-002248687d75"},"workflowDisplayName":{"value":"SampleApplication (Generate Card)"}},"parameterHintsV2":{"workflowName":{"value":"64ee0860-bb16-4491-bdff-cf3cc2d3bade"},"workflowEntityId":{"value":"a2e86122-1c59-ee11-be6f-002248687d75"},"workflowDisplayName":{"value":"SampleApplication (Generate Card)"}},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard","actions":["Run"]}}</ConnectionReferences>
+  <DatabaseReferences>{}</DatabaseReferences>
+  <AppComponents>[]</AppComponents>
+  <AppComponentDependencies>[]</AppComponentDependencies>
+  <CanConsumeAppPass>1</CanConsumeAppPass>
+  <CanvasAppType>0</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[{"dependencyid":"4e7e79b9-2559-ee11-be6f-00224868726e","componenttype":29,"componenttypeplatformname":"Workflow"},{"dependencyid":"a2e86122-1c59-ee11-be6f-002248687d75","componenttype":29,"componenttypeplatformname":"Workflow"}]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/karamem0_SampleApplication_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/karamem0_SampleApplication_DocumentUri.msapp</DocumentUri>
+  <AdditionalUris>
+    <AdditionalUri>/CanvasApps/karamem0_SampleApplication_AdditionalUris0_identity.json</AdditionalUri>
+  </AdditionalUris>
+</CanvasApp>
