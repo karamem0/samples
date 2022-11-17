@@ -1,0 +1,3 @@
+entityScope: Autonomous
+webApiRoutePrefix: ref
+appBasedAgentArgs: true

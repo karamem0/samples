@@ -1,0 +1,47 @@
+{
+  "name": "sample-application",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-intl": "^6.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "@babel/preset-typescript": "^7.17.12",
+    "@storybook/addon-actions": "^6.5.6",
+    "@storybook/addon-essentials": "^6.5.6",
+    "@storybook/addon-interactions": "^6.5.6",
+    "@storybook/addon-links": "^6.5.6",
+    "@storybook/builder-vite": "^0.1.35",
+    "@storybook/react": "^6.5.6",
+    "@storybook/testing-library": "^0.0.11",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^12.1.5",
+    "@types/jest": "^27.5.1",
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
+    "@vitejs/plugin-react": "^1.0.7",
+    "babel-jest": "^28.1.0",
+    "babel-loader": "^8.2.5",
+    "babel-plugin-react-intl-auto": "^3.3.0",
+    "extract-react-intl-messages": "^4.1.1",
+    "jest": "^28.1.0",
+    "jest-environment-jsdom": "^28.1.0",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.0"
+  },
+  "volta": {
+    "node": "16.20.2"
+  }
+}
