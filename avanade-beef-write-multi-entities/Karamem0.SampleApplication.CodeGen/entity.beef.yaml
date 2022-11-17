@@ -1,0 +1,61 @@
+entityScope: Autonomous
+eventOutbox: None
+appBasedAgentArgs: true
+webApiAutoLocation: true
+refDataText: true
+databaseSchema: SampleApplication
+entities:
+  - name: Product
+    webApiRoutePrefix: products
+    get: true
+    getAll: true
+    delete: true
+    collection: true
+    collectionResult: true
+    validator: ProductValidator
+    dataModel: true
+    autoImplement: Database
+    managerCtorParams:
+      - IProductLogDataSvc^logDataService
+    properties:
+      - name: ProductId
+        type: Guid
+        uniqueKey: true
+        identifierGenerator: IGuidIdentifierGenerator
+      - name: ProductName
+        type: string
+      - name: Price
+        type: decimal
+      - name: ChangeLog
+        type: ChangeLog
+    operations:
+      - name: Create
+        type: Create
+        managerCustom: true
+      - name: Update
+        type: Update
+        uniqueKey: true
+        managerCustom: true
+  - name: ProductLog
+    dataModel: true
+    autoImplement: Database
+    properties:
+      - name: LogId
+        type: Guid
+        uniqueKey: true
+        identifierGenerator: IGuidIdentifierGenerator
+      - name: ProductId
+        type: Guid
+      - name: ProductName
+        type: string
+      - name: Price
+        type: decimal
+      - name: ChangeLog
+        type: ChangeLog
+    operations:
+      - name: Create
+        type: Create
+        excludeWebApi: true
+        excludeWebApiAgent: true
+        excludeIManager: true
+        excludeManager: true
