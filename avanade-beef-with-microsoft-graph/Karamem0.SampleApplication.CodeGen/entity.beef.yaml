@@ -1,0 +1,19 @@
+entityScope: Autonomous
+appBasedAgentArgs: true
+webApiAutoLocation: true
+eventOutbox: None
+entities:
+  - name: User
+    getAll: true
+    collection: true
+    collectionResult: true
+    webApiRoutePrefix: users
+    autoImplement: None
+    properties:
+      - name: Id
+        type: Guid
+        uniqueKey: true
+      - name: UserPrincipalName
+        type: string
+      - name: DisplayName
+        type: string

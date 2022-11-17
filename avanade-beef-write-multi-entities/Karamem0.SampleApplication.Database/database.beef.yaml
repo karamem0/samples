@@ -1,0 +1,24 @@
+schema: SampleApplication
+eventOutbox: false
+entityScope: Autonomous
+tables:
+- name: Product
+  efModel: true
+  storedProcedures:
+    - name: Get
+      type: Get
+    - name: GetColl
+      type: GetColl
+    - name: Create
+      type: Create
+    - name: Update
+      type: Update
+    - name: Delete
+      type: Delete
+- name: ProductLog
+  efModel: true
+  storedProcedures:
+    - name: Get
+      type: Get
+    - name: Create
+      type: Create
