@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Beef.Database.Core" Version="4.2.5" />
+    <PackageReference Include="Beef.CodeGen.Core" Version="4.2.16" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Schema\**\*" />
+    <EmbeddedResource Include="Migrations\**\*" />
+    <EmbeddedResource Include="Data\**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Schema\" />
+    <Folder Include="Data\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Karamem0.SampleApplication.Test/Karamem0.SampleApplication.Test.csproj" />
+  <Project Path="Karamem0.SampleApplication/Karamem0.SampleApplication.csproj" />
+</Solution>

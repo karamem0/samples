@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="Pages">
+        <File Path="Pages\WebPart.aspx"
+              Url="Pages/WebPart.aspx"
+              ReplaceContent="TRUE" />
+  </Module>
+</Elements>

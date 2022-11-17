@@ -1,0 +1,11 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+
+.presence {
+  .container {
+    max-width: 700px;
+    margin: 0px auto;
+  }
+  .name {
+    margin-left: 5px;
+  }
+}

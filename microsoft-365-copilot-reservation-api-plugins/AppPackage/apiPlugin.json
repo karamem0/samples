@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/copilot/plugin/v2.1/schema.json",
+  "schema_version": "v2.1",
+  "name_for_human": "社内施設予約システム",
+  "description_for_human": "社内の会議室やブースの施設を予約できます。",
+  "namespace": "reservation",
+  "functions": [
+    {
+      "name": "postReserve",
+      "description": "ログインしているユーザーの代わりに社内施設を予約します。",
+      "capabilities": {
+        "response_semantics": {
+          "data_path": "$",
+          "properties": {
+            "title": "$.location",
+            "subtitle": "$.date"
+          }
+        }
+      }
+    }
+  ],
+  "runtimes": [
+    {
+      "type": "OpenApi",
+      "auth": {
+        "type": "None"
+      },
+      "spec": {
+        "url": "openApi.json"
+      },
+      "run_for_functions": [
+        "postReserve"
+      ]
+    }
+  ]
+}

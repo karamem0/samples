@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App create shapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="app"
+    >
+      <header
+        class="app-header"
+      >
+        <img
+          alt="logo"
+          class="app-logo"
+          src="[object Object]"
+        />
+        <p>
+          Hello Vite + React!
+        </p>
+        <p>
+          <button
+            type="button"
+          >
+            count is: 
+            0
+          </button>
+        </p>
+        <p>
+          Edit 
+          <code>
+            App.tsx
+          </code>
+           and save to test HMR updates.
+        </p>
+        <p>
+          <a
+            class="app-link"
+            href="https://reactjs.org"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Learn React
+          </a>
+           | 
+          <a
+            class="app-link"
+            href="https://vitejs.dev/guide/features.html"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Vite Docs
+          </a>
+        </p>
+        <p>
+          こんにちは世界
+        </p>
+      </header>
+    </div>
+  </div>
+</body>
+`;

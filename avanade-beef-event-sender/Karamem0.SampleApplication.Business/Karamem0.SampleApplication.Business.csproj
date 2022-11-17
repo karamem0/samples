@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CoreEx" Version="2.7.0" />
+    <PackageReference Include="CoreEx.Azure" Version="2.7.0" />
+    <PackageReference Include="CoreEx.Database.SqlServer" Version="2.7.0" />
+    <PackageReference Include="CoreEx.EntityFrameworkCore" Version="2.7.0" />
+    <PackageReference Include="CoreEx.Validation" Version="2.7.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.13" />
+  </ItemGroup>
+
+</Project>

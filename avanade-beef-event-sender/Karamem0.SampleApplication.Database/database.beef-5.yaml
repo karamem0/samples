@@ -1,0 +1,4 @@
+schema: SampleApplication
+tables:
+  - name: Product
+    efModel: true

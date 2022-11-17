@@ -1,0 +1,10 @@
+<environmentvariabledefinition schemaname="karamem0_SampleApplication_OpenAIEndpoint">
+  <displayname default="OpenAI Endpoint">
+    <label description="OpenAI Endpoint" languagecode="1041" />
+  </displayname>
+  <introducedversion>1.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

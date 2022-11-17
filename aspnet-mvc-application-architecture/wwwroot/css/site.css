@@ -1,0 +1,13 @@
+.well .form-group input,
+.well .form-group select,
+.well .form-group button {
+    margin-right: 15px;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.validation-summary-errors ul {
+    margin-bottom: 0;
+}

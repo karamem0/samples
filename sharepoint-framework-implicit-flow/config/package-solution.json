@@ -1,0 +1,12 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "SampleApplication",
+    "id": "4178445e-0923-4997-b16a-27cb4d086e79",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true
+  },
+  "paths": {
+    "zippedPackage": "solution/SampleApplication.sppkg"
+  }
+}

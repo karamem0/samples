@@ -1,0 +1,31 @@
+eventSubjectRoot: Karamem0
+eventActionFormat: PastTense
+eventSourceRoot: Karamem0/SampleApplication
+eventSourceKind: Relative
+eventPublish: DataSvc
+webApiAutoLocation: true
+refDataText: true
+entities:
+  - name: Product
+    text: Product
+    collection: true
+    collectionResult: true
+    get: true
+    getAll: true
+    create: true
+    update: true
+    delete: true
+    validator: ProductValidator
+    webApiRoutePrefix: products
+    autoImplement: EntityFramework
+    entityFrameworkModel: EfModel.Product
+    properties:
+      - name: ProductId
+        type: Guid
+        primaryKey: true
+      - name: ProductName
+        type: string
+      - name: Price
+        type: decimal
+      - name: ChangeLog
+        type: ChangeLog
