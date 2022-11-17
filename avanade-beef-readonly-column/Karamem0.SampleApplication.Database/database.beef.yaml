@@ -1,0 +1,6 @@
+schema: SampleApplication
+eventOutbox: false
+entityScope: Autonomous
+tables:
+  - name: Product
+    efModel: true
