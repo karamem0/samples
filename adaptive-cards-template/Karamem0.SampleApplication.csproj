@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AdaptiveCards.Templating" Version="2.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Template.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

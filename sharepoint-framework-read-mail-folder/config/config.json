@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "entry": "./lib/webparts/sample-application/SampleApplicationWebPart.js",
+      "manifest": "./src/webparts/sample-application/SampleApplicationWebPart.manifest.json",
+      "outputPath": "./dist/sample-application.bundle.js"
+    }
+  ],
+  "externals": {},
+  "localizedResources": {
+    "SampleApplicationStrings": "webparts/sample-application/loc/{locale}.js"
+  }
+}

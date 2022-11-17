@@ -1,0 +1,35 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.19/MicrosoftTeams.schema.json",
+  "version": "1.0.0",
+  "manifestVersion": "1.19",
+  "id": "95831607-985c-40ab-997d-1e44d1f9601c",
+  "name": {
+    "short": "Azure DevOps Copilot エージェント",
+    "full": "Azure DevOps Copilot エージェント"
+  },
+  "developer": {
+    "name": "karamem0",
+    "mpnId": "",
+    "websiteUrl": "https://github.com/karamem0/samples",
+    "privacyUrl": "https://github.com/karamem0/samples",
+    "termsOfUseUrl": "https://github.com/karamem0/samples"
+  },
+  "description": {
+    "short": "Azure DevOps の作業項目を検索します。",
+    "full": "Azure DevOps の作業項目を検索するための Copilot エージェントです。"
+  },
+  "icons": {
+    "outline": "outline.png",
+    "color": "color.png"
+  },
+  "accentColor": "#FFFFFF",
+  "copilotAgents": {
+    "declarativeAgents": [
+      {
+        "id": "57f72730-79be-43a0-bfc3-63b67f32fb02",
+        "file": "declarativeAgent.json"
+      }
+    ]
+  },
+  "validDomains": []
+}

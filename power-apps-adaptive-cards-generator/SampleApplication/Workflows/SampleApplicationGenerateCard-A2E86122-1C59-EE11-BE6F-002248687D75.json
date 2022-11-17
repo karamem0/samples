@@ -1,0 +1,163 @@
+{
+  "properties": {
+    "connectionReferences": {},
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "OpenAI Model Name (karamem0_SampleApplication_OpenAIModelName)": {
+          "defaultValue": "{{aoai-model-name}}",
+          "type": "String",
+          "metadata": {
+            "schemaName": "karamem0_SampleApplication_OpenAIModelName"
+          }
+        },
+        "OpenAI Endpoint (karamem0_SampleApplication_OpenAIEndpoint)": {
+          "defaultValue": "https://{{aoai-resource-name}}.openai.azure.com",
+          "type": "String",
+          "metadata": {
+            "schemaName": "karamem0_SampleApplication_OpenAIEndpoint"
+          }
+        },
+        "OpenAI API Key (karamem0_SampleApplication_OpenAIAPIKey)": {
+          "defaultValue": "{{aoai-api-key}}",
+          "type": "String",
+          "metadata": {
+            "schemaName": "karamem0_SampleApplication_OpenAIAPIKey"
+          }
+        },
+        "OpenAI API Version (karamem0_SampleApplication_OpenAIAPIVersion)": {
+          "defaultValue": "2023-08-01-preview",
+          "type": "String",
+          "metadata": {
+            "schemaName": "karamem0_SampleApplication_OpenAIAPIVersion"
+          }
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "fad41269-0675-416e-bad4-38450d2a76cc"
+          },
+          "type": "Request",
+          "kind": "PowerAppV2",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "title": "Value",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "Value",
+                  "x-ms-content-hint": "TEXT"
+                }
+              },
+              "required": [
+                "text"
+              ]
+            }
+          }
+        }
+      },
+      "actions": {
+        "Call_OpenAI_API": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "9f4c7a52-4823-4dcb-8157-59f65a6e0d87"
+          },
+          "type": "Http",
+          "inputs": {
+            "method": "POST",
+            "uri": "@{parameters('OpenAI Endpoint (karamem0_SampleApplication_OpenAIEndpoint)')}/openai/deployments/@{parameters('OpenAI Model Name (karamem0_SampleApplication_OpenAIModelName)')}/chat/completions",
+            "headers": {
+              "api-key": "@parameters('OpenAI API Key (karamem0_SampleApplication_OpenAIAPIKey)')"
+            },
+            "queries": {
+              "api-version": "@parameters('OpenAI API Version (karamem0_SampleApplication_OpenAIAPIVersion)')"
+            },
+            "body": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "You are assistant that generates Adaptive Cards."
+                },
+                {
+                  "role": "user",
+                  "content": "@{triggerBody()['text']}"
+                }
+              ],
+              "functions": [
+                {
+                  "name": "AdaptiveCards",
+                  "description": "Adaptive Cards",
+                  "parameters": {
+                    "type": "object",
+                    "properties": {
+                      "$schema": {
+                        "type": "string",
+                        "description": "http://adaptivecards.io/schemas/adaptive-card.json"
+                      },
+                      "type": {
+                        "type": "string",
+                        "description": "AdaptiveCard"
+                      },
+                      "version": {
+                        "type": "string",
+                        "description": "1.4"
+                      },
+                      "body": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "function_call": {
+                "name": "AdaptiveCards"
+              }
+            }
+          }
+        },
+        "PowerApp_または_Flow_に応答する": {
+          "runAfter": {
+            "Call_OpenAI_API": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "74d6e1e5-29a1-4c17-97c0-467f2147438e"
+          },
+          "type": "Response",
+          "kind": "PowerApp",
+          "inputs": {
+            "statusCode": 200,
+            "body": {
+              "value": "@{outputs('Call_OpenAI_API')['body/choices'][0]['message/function_call/arguments']}"
+            },
+            "schema": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "title": "Value",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

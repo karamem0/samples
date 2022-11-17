@@ -1,0 +1,58 @@
+entityScope: Autonomous
+eventOutbox: None
+eventPublish: None
+appBasedAgentArgs: true
+webApiAutoLocation: true
+refDataText: true
+databaseSchema: SampleApplication
+entities:
+  - name: Product
+    webApiRoutePrefix: products
+    get: true
+    getAll: true
+    create: true
+    delete: true
+    collection: true
+    collectionResult: true
+    validator: ProductValidator
+    managerCtorParams:
+      - AutoMapper.IMapper^mapper
+    entityFrameworkModel: EfModel.Product
+    autoImplement: EntityFramework
+    properties:
+      - name: ProductId
+        type: Guid
+        uniqueKey: true
+        identifierGenerator: IGuidIdentifierGenerator
+      - name: ProductName
+        type: string
+      - name: Price
+        type: decimal
+      - name: ChangeLog
+        type: ChangeLog
+    operations:
+      - name: Update
+        type: Update
+        uniqueKey: true
+        excludeWebApi: true
+        excludeWebApiAgent: true
+        excludeIManager: true
+        excludeManager: true
+      - name: UpdatePrice
+        type: Update
+        uniqueKey: true
+        valueType: ProductPrice
+        validator: ProductPriceValidator
+        webApiRoute: '{productId}/price'
+        managerCustom: true
+        excludeIDataSvc: true
+        excludeData: true
+        excludeIData: true
+        excludeDataSvc: true
+  - name: ProductPrice
+    properties:
+      - name: ProductId
+        type: Guid
+        uniqueKey: true
+      - name: Price
+        type: decimal

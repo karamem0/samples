@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Karamem0.SampleApplication": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7003",
+      "launchBrowser": false
+    }
+  }
+}
