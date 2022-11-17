@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Beef.Core" Version="4.2.8" />
+    <PackageReference Include="Microsoft.Graph" Version="4.31.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="DataSvc\" />
+    <Folder Include="Validation\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.19/MicrosoftTeams.schema.json",
+  "version": "1.0.0",
+  "manifestVersion": "1.19",
+  "id": "bfbec615-0b1d-4129-95d1-eb27522ce881",
+  "name": {
+    "short": "施設予約システム",
+    "full": "施設予約システム"
+  },
+  "developer": {
+    "name": "karamem0",
+    "mpnId": "",
+    "websiteUrl": "https://github.com/karamem0/samples",
+    "privacyUrl": "https://github.com/karamem0/samples",
+    "termsOfUseUrl": "https://github.com/karamem0/samples"
+  },
+  "description": {
+    "short": "施設を予約または検索できます。",
+    "full": "社内の会議室やブースの施設を予約できます。"
+  },
+  "icons": {
+    "outline": "outline.png",
+    "color": "color.png"
+  },
+  "accentColor": "#FFFFFF",
+  "copilotAgents": {
+    "declarativeAgents": [
+      {
+        "id": "350b7c19-59e4-4b2f-8923-477c318ce39f",
+        "file": "declarativeAgent.json"
+      }
+    ]
+  },
+  "validDomains": []
+}
